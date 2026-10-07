@@ -1,0 +1,64 @@
+/* =========================================================
+   Tokens de diseño — Landing Acreditación en Alta Calidad
+   Paleta institucional UNIMINUTO (rojo dominante + neutros)
+   ========================================================= */
+
+:root {
+  /* --- Color --- */
+  --rojo: #da291c;          /* rojo institucional UNIMINUTO */
+  --rojo-profundo: #7c130a; /* fondo del hero y del pie */
+  --rojo-claro: #f6ddd9;    /* tintes y bordes suaves */
+  --tinta: #17161a;         /* texto principal */
+  --papel: #fafaf8;         /* fondo general */
+  --niebla: #e6e3dd;        /* reglas, separadores, tarjetas */
+  --gris: #63626a;          /* texto secundario */
+  --ocre: #e9a21b;          /* acento puntual: hitos de la línea de tiempo */
+  --blanco: #ffffff;
+
+  /* --- Tipografía --- */
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --cuerpo: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  /* Escala modular ~1.25, fluida entre 360px y 1280px */
+  --t-xs: 0.8125rem;
+  --t-sm: 0.9375rem;
+  --t-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --t-md: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --t-lg: clamp(1.6rem, 1.35rem + 1.1vw, 2.25rem);
+  --t-xl: clamp(2.2rem, 1.6rem + 2.6vw, 3.6rem);
+  --t-hero: clamp(2.6rem, 1.5rem + 5vw, 5.75rem);
+
+  /* --- Ritmo y layout --- */
+  --ancho: 1140px;
+  --canal: clamp(1.25rem, 5vw, 4rem); /* margen lateral */
+  --e1: 0.5rem;
+  --e2: 1rem;
+  --e3: 1.75rem;
+  --e4: 3rem;
+  --e5: 5rem;
+  --e6: clamp(4.5rem, 9vw, 8rem);     /* separación entre secciones */
+
+  --radio: 4px;                        /* esquinas casi rectas, tono institucional */
+  --regla: 1px solid var(--niebla);
+}
+
+/* Modo oscuro del visor: mantenemos la identidad, oscurecemos el papel */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #121114;
+    --tinta: #f3f1ee;
+    --gris: #a5a3ac;
+    --niebla: #2c2a30;
+    --blanco: #1b1a1f;
+    --rojo-claro: #3a1712;
+  }
+}
+
+:root[data-theme="dark"] {
+  --papel: #121114;
+  --tinta: #f3f1ee;
+  --gris: #a5a3ac;
+  --niebla: #2c2a30;
+  --blanco: #1b1a1f;
+  --rojo-claro: #3a1712;
+}

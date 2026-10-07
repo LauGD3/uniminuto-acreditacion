@@ -1,0 +1,7 @@
+# Carpeta que Bun sirve tal cual en la raíz del sitio durante `bun dev`.
+# Ahí viven el video y el póster: public/media/... -> /media/...
+[serve.static]
+directory = "public"
+
+[install]
+registry = "https://registry.npmjs.org"
